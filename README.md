@@ -10,7 +10,17 @@ The project was developed as part of my practical AWS cloud learning journey, fo
 
 ## Architecture
 
-Frontend (Amazon S3) → API Gateway → AWS Lambda (Python) → Amazon DynamoDB
+ 
+```mermaid
+flowchart TD
+    S3["Amazon S3 - Static Website"] -->|Loads frontend| Browser["User Browser"]
+    Browser -->|POST /tickets| API["Amazon API Gateway"]
+    API --> Lambda["AWS Lambda - Python"]
+    Lambda -->|Store ticket| DB[("Amazon DynamoDB - SupportTickets")]
+    Lambda -->|HTTP 201 response| API
+    API -->|Confirmation| Browser
+```
+  
 
 ## AWS Services Used
 
