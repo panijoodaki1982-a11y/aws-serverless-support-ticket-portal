@@ -31,7 +31,7 @@ button{margin-top:20px;background:#ff9900;border:0;border-radius:9px;padding:13p
 <div class="small">Built with Amazon S3 • API Gateway • AWS Lambda</div>
 </div></div>
 <script>
-const API="https://vix4tqpbt9.execute-api.eu-west-3.amazonaws.com";
+const API = "https://YOUR_API_ID.execute-api.eu-west-3.amazonaws.com";
 const form=document.getElementById("ticketForm"), msg=document.getElementById("msg");
 form.addEventListener("submit",async(e)=>{
  e.preventDefault(); msg.style.display="block"; msg.textContent="Submitting...";
